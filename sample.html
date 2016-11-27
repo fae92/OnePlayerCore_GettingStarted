@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<script src="./one-player-core.js"></script>
+<script src="http://hss-live-c1-aka.canal-plus.com/player/prod/playerCore/one-player-core.js"></script>
 <script src="https://unpkg.com/@reactivex/rxjs/dist/global/Rx.js"></script>
 
 <title>CanalPlus - Player HTML5</title>
@@ -11,13 +11,10 @@
   <video id="videoEl" controls></video>
 
 <script>
-///////////////////1//////////////////////////////
-
   Observable = Rx.Observable;
 
   function RequestError(url, xhr, message) {
     var reason = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
-
     this.name = "RequestError";
     this.url = url;
     this.xhr = xhr;
@@ -34,7 +31,7 @@
     var code = _ref.code,
         method = _ref.method,
         message = _ref.message;
-
+    
     this.name = "RestCallMethodError";
     this.url = url;
     this.code = code;
@@ -258,21 +255,22 @@
   request.getNodeTextContent = getNodeTextContent;
 
 
-  ///////////////////////////////////////////////
+ // instanciate the one-player-core
     var player = new RxPlayer({
       videoElement: document.getElementById("videoEl"),
     });
 
+  //In production i recommend to remove this code
     player.log.setLevel("DEBUG");
     player.addEventListener("error", function (error) {
           alert(error.message);
         });
 
 
+//convert Byte to str and conversely  
   function bytesToStr(bytes) {
     return String.fromCharCode.apply(null, bytes);
   }
-
 
   function strToBytes(str) {
     var len = str.length;
@@ -305,17 +303,15 @@
       }
   ]
 
-    player.loadVideo(
-      {
-      "url": "http://hss-vod-aka.canal-overseas.com/vod/assets/subscription-c-ald_1186603_1/_/hss-wv-cp-drom-hd/Manifest",
-      "transport": "smooth",
-      "keySystems": keySystems,
-      "live": true,
-    })
+  player.loadVideo(
+    {
+    "url": "http://hss-vod-aka.canal-overseas.com/vod/assets/subscription-c-ald_1186603_1/_/hss-wv-cp-drom-hd/Manifest",
+    "transport": "smooth",
+    "keySystems": keySystems,
+    "live": true,
+  })
 
-    player.play();
-
-
-  </script>
+  player.play();
+</script>
 </body>
 </html>

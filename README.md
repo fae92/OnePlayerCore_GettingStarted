@@ -13,6 +13,15 @@ or check our *[repo](https://github.com/canalplus/one-player-core/blob/)*
 
 if you don't have right try this [one](https://github.com/canalplus/rx-player) `Rx-player` which is our Open source version.
 
+The one-player-core is a Javascript library implementic a generic streaming video player using HTML5 Media Source and Encrypted Media extensions. It is entirely written in reactive-programming with ECMAScript 6.
+
+It comes with a support for DASH and SmoothStreaming transports.
+
+see the API of player for more interaction [Read the detailed API](//github.com/canalplus/one-player-core/blob/master/API.md).
+
+This allowed us to implement some nice features quite easily. For instance, because in the one-player-core all asynchronous tasks are encapsulated in observable data-structures, we were able to add a transparent [retry system](https://github.com/canalplus/canal-js-utils/blob/master/rx-ext.js#L73-L100) with a simple observable operator to declaratively handle any failure and replay the whole process.
+
+Another example is the way we abstracted our transport layer into an observable pipeline, allowing us to support different type of streaming systems with its own asynchronous specifities. And because one-player-core is message-driven, this encapsulation allows us isolate the transport I/O into a WebWorker without any effort, or add an offline support for any pipeline implementation.
     
   
 ## Sample

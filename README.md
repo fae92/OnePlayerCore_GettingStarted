@@ -4,8 +4,8 @@
 
 The links to the player will be provided to you by Akamai (CDN) as below :
 
-    $ http://hss-live-c1-aka.canal-plus.com/player/prod/playerCore/one-player-core.js
-    $ http://hss-live-c1-aka.canal-plus.com/player/prod/playerCore/one-player-core.min.js
+    $ https://static.canal-overseas.com/player/prod/playerCore/v2/one-player-core.js
+    $ https://static.canal-overseas.com/player/prod/playerCore/v2/one-player-core.min.js
 
 for more details about implementation of our player please *[see there](https://github.com/canalplus/one-player-core/blob/master/README.md)*
 or check our *[repo](https://github.com/canalplus/one-player-core/blob/)*
@@ -78,4 +78,6 @@ The `requests` function is a custom implementation, look the sample file for mor
  
 ## Run it : 
  You must have a client certificat or use a X1 ( cube C ) to get licence by our DRM platform.
+Or you must have a tokenId ( take it on canalplus-{zone}.com )
+
  

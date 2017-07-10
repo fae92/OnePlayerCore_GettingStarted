@@ -7,6 +7,11 @@ The links to the player will be provided to you by Akamai (CDN) as below :
     $ https://static.canal-overseas.com/player/prod/playerCore/v2/one-player-core.js
     $ https://static.canal-overseas.com/player/prod/playerCore/v2/one-player-core.min.js
 
+
+for the old version of chrome (<52):
+    $ https://static.canal-overseas.com/player/prod/playerCore/one-player-core.js
+    $ https://static.canal-overseas.com/player/prod/playerCore/one-player-core.min.js
+
 for more details about implementation of our player please *[see there](https://github.com/canalplus/one-player-core/blob/master/README.md)*
 or check our *[repo](https://github.com/canalplus/one-player-core/blob/)*
 

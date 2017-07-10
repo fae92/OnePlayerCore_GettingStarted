@@ -9,6 +9,7 @@ The links to the player will be provided to you by Akamai (CDN) as below :
 
 
 for the old version of chrome (<52):
+  
     $ https://static.canal-overseas.com/player/prod/playerCore/one-player-core.js
     $ https://static.canal-overseas.com/player/prod/playerCore/one-player-core.min.js
 
